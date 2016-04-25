@@ -122,11 +122,12 @@ class TimerScrollView: UIView,UIScrollViewDelegate {
             scrollView!.contentOffset = CGPointMake(self.frame.size.width, 0)
         }
         
-//        if timerDelegate?(respondsToSelector(Selector("scrollToIndexOfPage:"))) {
-        let index = Int((scrollView!.contentOffset.x - self.frame.size.width) / self.frame.size.width)
-        pageCT?.currentPage = index
-        timerDelegate?.scrollToIndexOfPage(index)
-//        }
+        let vc = self.timerDelegate as! UIViewController
+        if vc.respondsToSelector(Selector("scrollToIndexOfPage:")) {
+            let index = Int((scrollView!.contentOffset.x - self.frame.size.width) / self.frame.size.width)
+            pageCT?.currentPage = index
+            timerDelegate?.scrollToIndexOfPage(index)
+        }
         
         
     }
