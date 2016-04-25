@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 	s.author = {'qdz153642698' => '15810695683@163.com'}
 	s.ios.deployment_target = '8.0'
 	s.source = {:git => 'https://github.com/qdz153642698/TimerScrollView.git',:tag => s.version}
-	s.source_files = '*.swift'
+	s.source_files = 'TimerScrollView/*.swift'
 	s.requires_arc = true
 	s.frameworks = 'UIKit'
 end
