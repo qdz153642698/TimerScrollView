@@ -1,3 +1,3 @@
 # TimerScrollView
 An easy scrollView for timer ,this is the demo ,which i want to make it support cocoaPods
-![](http://gifs.gifme.io/i/1ac71e2c68.gif)
+![](http://ww3.sinaimg.cn/mw690/de52f1a7jw1f3q4mq0mpsg20a006oqv8.gif)
