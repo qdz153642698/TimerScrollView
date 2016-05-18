@@ -5,7 +5,7 @@ An easy scrollView for timer ,this is the demo ,which i want to make it support 
 #Install with Pod
 ```
 platform :ios, '8.0'
-pod 'SDWebImage', '~>1.0.0'
+pod 'SDWebImage', '~>1.0.1'
 ```
 If you are using Swift, be sure to add use_frameworks! and set your target to iOS 8+:
 
