@@ -80,7 +80,8 @@ class TimerScrollView: UIView,UIScrollViewDelegate {
             timer = nil
         }
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("timerRun:"), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("timerRun:"), userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
     }
     
     //暂停
@@ -93,7 +94,7 @@ class TimerScrollView: UIView,UIScrollViewDelegate {
     
     func timerRun(runTimer:NSTimer) {
         let offsetX = scrollView!.contentOffset.x
-        UIView.animateWithDuration(0.5, animations: { () -> Void in
+        UIView.animateWithDuration(0.4, animations: { () -> Void in
                 self.scrollView!.contentOffset = CGPointMake(offsetX+self.frame.size.width, 0)
             }) { (boolValue:Bool) -> Void in
                 self.resetContentOffset()
